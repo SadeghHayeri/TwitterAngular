@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>My Servers!</h3>
+            <input [(ngModel)]="serverName" type="text" name="" value="">
+            <button (click)="onServerCreation()" class="btn btn-primary" [disabled]="!addServerEnable">Add Server</button>
+            <p>{{ serverStatus + serverName }}</p>
+            <p *ngIf="serverCreated">salam!</p>
+            <hr>
+            <app-server></app-server>
+            <app-server></app-server>
+            <app-server></app-server>
+            <app-server></app-server>
+        </div>
+    </div>
+</div>
