@@ -1,0 +1,33 @@
+.newTweet {
+  background-color: #fff;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.newTweet textarea {
+  width: 96%;
+  margin-left: 2%;
+  margin-top: 20px;
+  float: left;
+  border: 1px solid #ccc;
+  outline: none;
+  height: 100px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  max-width: 96%;
+  max-height: 100px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.newTweet textarea:focus {
+  box-shadow: none;
+  border: 1px solid rgb(177, 177, 177);
+}
+
+
+.newTweet .btn {
+  margin-bottom: 20px;
+  width: 96%;
+  margin-left: 2%;
+}
