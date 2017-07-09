@@ -1,0 +1,36 @@
+.tweet {
+  margin-top: 30px;
+  border-radius: 5px;
+  width: 100%;
+  float: left;
+}
+
+.profileImg {
+  width: 10%;
+  background-size: 100%;
+  border-radius: 100%;
+  margin-top: 30px;
+  float: left;
+}
+
+.tweet p {
+  font-size: 20px;
+  font-weight: 200;
+  float: left;
+  width: 85%;
+  padding-left: 5%;
+  margin-top: 30px;
+}
+
+.tweet span {
+  font-size: 20px;
+  float: right;
+  cursor: pointer;
+  clear: both;
+  margin-right: 50px;
+  margin-top: -10px;
+}
+
+.tweet .liked {
+  color: red;
+}
