@@ -4,11 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { NewTweetComponent } from './new-tweet/new-tweet.component';
-import { ProfileInfoComponent } from './profile-info/profile-info.component';
-import { TweetComponent } from './tweet/tweet.component';
-import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './main-page/header/header.component';
+import { NewTweetComponent } from './main-page/new-tweet/new-tweet.component';
+import { ProfileInfoComponent } from './main-page/profile-info/profile-info.component';
+import { TweetComponent } from './main-page/tweet/tweet.component';
+import { FooterComponent } from './main-page/footer/footer.component';
+import { MainPageComponent } from './main-page/main-page.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FooterComponent } from './footer/footer.component';
     ProfileInfoComponent,
     TweetComponent,
     FooterComponent,
+    MainPageComponent,
   ],
   imports: [
     BrowserModule,
