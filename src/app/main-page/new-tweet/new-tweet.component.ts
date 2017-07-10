@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MainPageService} from '../main-page.service';
 
 @Component({
   selector: 'app-new-tweet',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewTweetComponent implements OnInit {
 
-  constructor() { }
+  private maxLenght: number = 100;
+  constructor(private mainServic: MainPageService) { }
 
   ngOnInit() {
+  }
+
+  onSubmit(form) {
+    if(form.dirty && form.value.text !== null) {
+      this.mainServic.newTweet(form.value.text);
+    }
   }
 
 }

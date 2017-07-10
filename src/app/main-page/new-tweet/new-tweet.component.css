@@ -18,11 +18,15 @@
   max-width: 96%;
   max-height: 100px;
   background-color: rgba(0, 0, 0, 0.05);
+  transition: all .5s;
 }
 
 .newTweet textarea:focus {
   box-shadow: none;
   border: 1px solid rgb(177, 177, 177);
+  height: 110px;
+  max-height: 110px;
+  box-shadow: 0px 0px 5px rgba(0,0,0,.2) inset;
 }
 
 
@@ -30,4 +34,12 @@
   margin-bottom: 20px;
   width: 96%;
   margin-left: 2%;
+}
+
+button[disabled] {
+  background-color: red;
+}
+
+button[disabled]:hover {
+  background-color: red;
 }

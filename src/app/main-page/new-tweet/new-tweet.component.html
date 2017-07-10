@@ -1,4 +1,19 @@
-<div class="newTweet">
-  <textarea class="form-control" name="name" placeholder="write here..."></textarea>
-  <div class="btn btn-primary form-control">Tweet <span style="font-size: 10px;">(30/140)</span></div>
-</div>
+<form (ngSubmit)="onSubmit(f); f.reset();" #f="ngForm" class="newTweet">
+
+  <textarea
+    ngModel
+    class="form-control"
+    name="text"
+    placeholder="write here..."
+  ></textarea>
+
+  <button
+    type="submit"
+    class="btn btn-primary form-control"
+    [disabled]="(0 == (f.value.text ? f.value.text.length : 0) || (f.value.text ? f.value.text.length : 0) > maxLenght) && f.dirty">
+
+    Tweet<span style="font-size: 10px;">({{ f.value.text ? f.value.text.length : 0 }}/{{ maxLenght }})</span>
+
+  </button>
+
+</form>
