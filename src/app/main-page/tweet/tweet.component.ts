@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {TweetModule} from '../tweet.module';
+import {UserModule} from '../user.module';
+import {MainPageService} from '../main-page.service';
 
 @Component({
   selector: 'app-tweet',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TweetComponent implements OnInit {
 
-  constructor() { }
+  @Input() public tweet: TweetModule;
+
+  constructor(private mainServic: MainPageService) { }
 
   ngOnInit() {
+  }
+
+  onLikeTweet() {
+    if (!this.tweet.liked) {
+      this.mainServic.like(this.tweet.id);
+    } else {
+      this.mainServic.unLike(this.tweet.id);
+    }
   }
 
 }

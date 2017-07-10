@@ -1,5 +1,19 @@
-<div class="tweet">
-  <img src="http://www.st2299.com/data/wallpapers/64/wp-image-57712107.jpg" class="profileImg" alt="">
-  <p>Lorem ipsuusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut in voluptate velit esse cillum id est laborum.</p>
-  <span class="glyphicon glyphicon-heart"></span>
+<div class="tweet" [ngClass]="{gray: !tweet.twitted}">
+  <img [src]="tweet.owner.imagePath" class="profileImg" alt="">
+  <p class="owner">{{ tweet.owner.name }}</p>
+  <p class="date">{{ tweet.date | date:'medium' }}</p>
+  <p class="body">{{ tweet.body }}</p>
+  <div class="likes">
+    <span
+      (click)="onLikeTweet()"
+      [ngClass]="{
+        liked: tweet.liked,
+        redPending: tweet.likePending && !tweet.liked,
+        blackPending: tweet.likePending && tweet.liked
+      }"
+      class="glyphicon glyphicon-heart">
+    </span>
+
+    <p class="num">{{ tweet.likesCount }}</p>
+  </div>
 </div>

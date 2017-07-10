@@ -3,6 +3,12 @@
   border-radius: 5px;
   width: 100%;
   float: left;
+  transition: background-color .3s;
+}
+
+.tweet:hover {
+  background-color: rgba(0,0,0,.01);
+  /*box-shadow: 0px 0px 10px rgba(0,0,0,.1);*/
 }
 
 .profileImg {
@@ -10,27 +16,94 @@
   background-size: 100%;
   border-radius: 100%;
   margin-top: 30px;
+  margin-left: 3%;
   float: left;
+  /*box-shadow: 0px 0px 5px rgba(0,0,0,.3);*/
 }
 
-.tweet p {
+.tweet .owner {
+  font-size: 20px;
+  /*font-weight: 200;*/
+  float: left;
+  /*width: 20%;*/
+  padding-left: 5%;
+  margin-top: 20px;
+}
+
+.tweet .date {
+  font-size: 10px;
+  /*font-weight: 200;*/
+  float: left;
+  width: 20%;
+  padding-left: 5px;
+  margin-top: 30px;
+  color: #aaa;
+}
+
+.tweet .body {
   font-size: 20px;
   font-weight: 200;
   float: left;
   width: 85%;
   padding-left: 5%;
-  margin-top: 30px;
+  /*margin-top: 30px;*/
 }
 
-.tweet span {
-  font-size: 20px;
-  float: right;
-  cursor: pointer;
+.likes {
   clear: both;
   margin-right: 50px;
   margin-top: -10px;
 }
 
-.tweet .liked {
+.likes span {
+  font-size: 20px;
+  float: right;
+  cursor: pointer;
+  /*clear: both;*/
+  /*margin-right: 50px;*/
+  /*margin-top: -10px;*/
+}
+
+.likes .num {
+  width: 50px;
+  float: right;
+  cursor: pointer;
+  font-weight: 200;
+  font-size: 16px;
+  text-align: right;
+  margin-right: 5px;
+  /*clear: both;*/
+  /*margin-right: 50px;*/
+  /*margin-top: -10px;*/
+}
+
+.liked {
   color: red;
+}
+
+.gray {
+  background-color: #fff;
+  background-image: url('../../../assets/p.gif');
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: .4;
+}
+
+.gray:hover {
+  background-color: #fff;
+}
+
+.gray img,
+.gray p,
+.gray div {
+  opacity: 1;
+}
+
+.redPending {
+  color: indianred;
+}
+
+.blackPending {
+  color: gray;
 }
