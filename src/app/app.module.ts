@@ -10,6 +10,9 @@ import { ProfileInfoComponent } from './main-page/profile-info/profile-info.comp
 import { TweetComponent } from './main-page/tweet/tweet.component';
 import { FooterComponent } from './main-page/footer/footer.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import {MainPageService} from './main-page/main-page.service';
+import { BgImageDirective } from './shared/bg-image.directive';
+import { ReversePipe } from './shared/reverse.pipe';
 
 @NgModule({
   declarations: [
@@ -20,13 +23,15 @@ import { MainPageComponent } from './main-page/main-page.component';
     TweetComponent,
     FooterComponent,
     MainPageComponent,
+    BgImageDirective,
+    ReversePipe,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [MainPageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {TweetModule} from './tweet.module';
+import {MainPageService} from './main-page.service';
+import {UserModule} from "./user.module";
 
 @Component({
   selector: 'app-main-page',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
 
-  constructor() { }
+  public userInfo: UserModule;
+  public tweets: TweetModule[];
+
+  constructor(private mainServic: MainPageService) { }
 
   ngOnInit() {
+    this.userInfo = this.mainServic.getUserInfo();
+    this.tweets = this.mainServic.getTweets();
   }
 
 }
