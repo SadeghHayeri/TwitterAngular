@@ -1,8 +1,8 @@
 <div class="profileInfo">
   <div>
-    <div class="bgImg"></div>
-    <div class="profileImg"></div>
-    <div class="name">Sadegh Hayeri</div>
-    <div class="username">@SadeghHayeri</div>
+    <div class="bgImg" appBgImage="{{ user.coverPath }}"></div>
+    <div class="profileImg" appBgImage="{{ user.imagePath }}"></div>
+    <div class="name">{{ user.name }}</div>
+    <div class="username">@{{ user.username }}</div>
   </div>
 </div>
